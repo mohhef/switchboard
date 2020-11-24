@@ -57,6 +57,7 @@
       "react"
     ],
     "rules": {
+      "prettier/prettier": "warn",
       "class-methods-use-this": "warn",
       "import/named": "warn",
       "no-plusplus": "warn",
@@ -75,7 +76,8 @@
       "react/no-array-index-key": "warn",
       "react/prefer-stateless-function": "warn",
       "react/prop-types": "warn",
-      "react/sort-comp": "warn"
+      "react/sort-comp": "warn",
+      "react/no-unused-state": "warn"
     }
   },
   "browserslist": {
