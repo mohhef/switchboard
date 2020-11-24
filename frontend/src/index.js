@@ -2,12 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+
 import HeaderBar from "./HeaderAppBar";
 import HomePage from "./General/HomePage";
 import DeviceListPage from "./devicelist/DeviceListPage";
 import StreamingTablePage from "./createStream/StreamingPage";
+import DeviceDetailsPage from "./DeviceDetailsPage/DeviceDetailsPage";
+
 import * as DeviceApi from "./api/DeviceApi";
 import * as StreamApi from "./api/StreamApi";
+
+import * as SampleData from "./api/SampleData";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -30,6 +35,16 @@ ReactDOM.render(
               {...props}
               deviceDataSource={DeviceApi}
               streamDataSource={StreamApi}
+            />
+          )}
+        />
+        <Route
+          exact
+          path="/Test"
+          render={(props) => (
+            <DeviceDetailsPage
+              {...props}
+              device={SampleData.getSampleSender()}
             />
           )}
         />
